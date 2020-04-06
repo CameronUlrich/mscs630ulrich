@@ -1,0 +1,95 @@
+#encryptTextLabel{
+    color: white;
+    animation: fadeIn 1s ease-out;
+    font-family: Verdana, Geneva, sans-serif;
+    position: absolute;
+    left: 375px;
+    top: 200px;
+    font-size: 25px;
+}
+
+
+
+#encryptTextInput {
+
+    position: absolute;
+    left: 450px;
+    top: 250px;
+
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    animation: fadeIn 1s ease-out;
+}
+
+#encryptTextInput:focus{
+    width: 350px;
+}
+
+#encryptImageInput{
+    position: absolute;
+    left: 1200px;
+    top: 250px;
+    color: white;
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: transparent;
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    animation: fadeIn 1s ease-out;
+}
+
+#encryptButton{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: white;
+    background-color: transparent;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 650px;
+    left: 875px;
+    animation: fadeIn 1s ease-out;
+}
+
+#encryptButton:hover{
+    background-color: rgb(67, 175, 67);
+}
+
+
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform: translateY(5%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
