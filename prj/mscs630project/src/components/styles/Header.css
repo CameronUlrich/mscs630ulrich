@@ -36,7 +36,19 @@
     
   }
   
+  .topnav .homePage{
+    padding: 10px 26px;
+    margin-top: -6px;
+    border: none;
+    color: white;
+    float: left;
+    font-size: 19px;
+  }
 
+  .topnav .homePage:hover{
+    color: rgb(204, 48, 0);
+    
+  }
 
   
 

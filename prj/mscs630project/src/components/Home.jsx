@@ -9,7 +9,7 @@ class Home extends Component {
             <div>
                 <Header />
                 <div className="homePage">
-                    <h1>Welcome to Total Image Encrypt!</h1>
+                    <h1 id="welcomeText">Welcome to Total Image Encrypt!</h1>
                 </div>
             </div>
         );
