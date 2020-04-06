@@ -15,6 +15,8 @@ class EncryptPage extends Component {
 
                 <input id="encryptTextInput" type="text" placeholder="Text to be encrypted"></input>
 
+                <label id="encryptImageLabel">Image to be encrypted:</label>
+
                 <input id="encryptImageInput" type="file"></input>
 
                 <Button id="encryptButton">Encrypt</Button>

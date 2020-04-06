@@ -8,6 +8,16 @@
     font-size: 25px;
 }
 
+#encryptImageLabel{
+    color: white;
+    animation: fadeIn 1s ease-out;
+    font-family: Verdana, Geneva, sans-serif;
+    position: absolute;
+    left: 1200px;
+    top: 200px;
+    font-size: 25px;
+}
+
 
 
 #encryptTextInput {
@@ -26,7 +36,7 @@
     
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 20px 12px 10px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     animation: fadeIn 1s ease-out;
