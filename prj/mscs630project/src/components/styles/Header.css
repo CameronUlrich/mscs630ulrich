@@ -36,7 +36,7 @@
     
   }
   
-  .topnav .homePage{
+  .topnav .homeText{
     padding: 10px 26px;
     margin-top: -6px;
     border: none;
@@ -45,7 +45,7 @@
     font-size: 19px;
   }
 
-  .topnav .homePage:hover{
+  .topnav .homeText:hover{
     color: rgb(204, 48, 0);
     
   }

@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import React, { Component } from 'react';
 import Header from './Header';
+import './styles/Home.css';
 
 
 class Home extends Component {
