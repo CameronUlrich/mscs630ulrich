@@ -1,54 +1,22 @@
-#encryptTextLabel{
+#decryptImageLabel{
     color: white;
     animation: fadeIn 1s ease-out;
     font-family: Verdana, Geneva, sans-serif;
     position: absolute;
-    left: 375px;
-    top: 200px;
-    font-size: 25px;
-}
-
-#encryptImageLabel{
-    color: white;
-    animation: fadeIn 1s ease-out;
-    font-family: Verdana, Geneva, sans-serif;
-    position: absolute;
-    left: 1200px;
+    left: 820px;
     top: 200px;
     font-size: 25px;
 }
 
 
 
-#encryptTextInput {
-
-    position: absolute;
-    left: 450px;
-    top: 250px;
-
-    width: 250px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 20px;
-    background-color: transparent;
-    color: white;
-    
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 10px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    animation: fadeIn 1s ease-out;
-}
-
-#encryptTextInput:focus{
+#decryptTextInput:focus{
     width: 350px;
 }
 
-#encryptImageInput{
+#decryptImageInput{
     position: absolute;
-    left: 1200px;
+    left: 820px;
     top: 250px;
     color: white;
     width: 300px;
@@ -66,7 +34,7 @@
     animation: fadeIn 1s ease-out;
 }
 
-#encryptButton{
+#decryptButton{
     border: 2px solid #ccc;
     border-radius: 4px;
     color: white;
@@ -87,8 +55,8 @@
     animation: fadeIn 1s ease-out;
 }
 
-#encryptButton:hover{
-    background-color: rgb(67, 175, 67);
+#decryptButton:hover{
+    background-color: rgb(36, 36, 255);
     border-radius: 25px;
 }
 

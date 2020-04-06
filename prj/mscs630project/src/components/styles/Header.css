@@ -37,28 +37,7 @@
   }
   
 
-  .topnav .foxfitLogo{
-    float: left;
-    height: 60px;
-    margin-top: -18px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
 
-  .topnav .profilePic{
-    border-radius: 50%;
-  
-    
-    width: 30px;
-    height: 30px;
-    
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-
-  
   
 
   .topnav .encryptBtn{
@@ -121,77 +100,7 @@
 
   
 
-  .topnav .logInBtn{
-    padding: 10px 16px;
-    margin-top: 9px;
-    border: none;
-    background-color: transparent;
-    border: 2px solid white;
-    margin-right: 35px;
-    color: white;
-    float: right;
-    font-size: 19px;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-
-  .topnav .logInBtn:hover{
-    border: none;
-    background-color: rgba(255, 255, 255, 0.226);
-    
-    border: 2px solid white;
-    border-radius: 25px;
-    color: white;
-    float: right;
-    font-size: 19px;
-    text-decoration: none;
-  }
-
-  .topnav .signUpBtn{
-    padding: 10px 16px;
-    margin-top: 9px;
-    border: none;
-    background-color: transparent;
-    border: 2px solid white;
-    margin-right: 35px;
-    color: white;
-    float: right;
-    font-size: 19px;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-
-  .topnav .signUpBtn:hover{
-    border: none;
-    background-color: rgba(255, 255, 255, 0.226);
-    
-    border: 2px solid white;
-    border-radius: 25px;
-    color: white;
-    float: right;
-    font-size: 19px;
-    text-decoration: none;
-  }
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    /*background-color: rgba(221, 221, 221, 0.089);*/
-    color: white;
-    opacity: 1;
-    /*font-size: 20px;*/
-    text-decoration: none;
-    color: rgb(97, 255, 123);
-    
-    
-    
-    
-  }
 
   
 

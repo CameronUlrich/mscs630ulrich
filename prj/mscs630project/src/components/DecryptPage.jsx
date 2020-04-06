@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import React, { Component } from 'react';
 import Header from './Header';
-
+import './styles/Decrypt.css';
 
 
 class DecryptPage extends Component {
@@ -10,13 +10,11 @@ class DecryptPage extends Component {
             <div>
                 <Header />
                 
-                <div className="decrypt">
-                    <ul>
-                        <Button>Decrypt</Button>
-                        
-                        
-                    </ul>
-                </div>
+                <label id="decryptImageLabel">Image to be decrypted:</label>
+
+                <input id="decryptImageInput" type="file"></input>
+
+                <Button id="decryptButton">Decrypt</Button>
             </div>
         );
         
