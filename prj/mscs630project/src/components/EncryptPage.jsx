@@ -10,40 +10,49 @@ class EncryptPage extends Component {
 
     encryptText = () => {
         let textToEncrypt = document.getElementById('encryptTextInput');
+        let encryptKey = document.getElementById('encryptKeyInput');
         
-        var aesjs = require("aes-js")
-        // the AES block cipher algorithm works on 16 byte bloca ks, no more, no less
-        var text = text;
-        var textAsBytes = aesjs.utils.utf8.toBytes(text)
-        console.log(textAsBytes);
-        // [65, 66, 108, 111, 99, 107, 73, 115, 49, 54, 66, 121, 116, 101, 115, 33]
+        var aesjs = require("aes-js");
+        // An example 128-bit key (16 bytes * 8 bits/byte = 128 bits)
+        var keyArray = [];
+        var keyTest = encryptKey.value;
+        var i;
+        for(i = 0; i < keyTest.length; i++){
+            
+            keyArray[i] = keyTest.charAt(i);
+            keyArray[i] = parseInt(keyArray[i]);
 
-        // create an instance of the block cipher algorithm
-        var key = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3];
-        var aes = new aesjs.AES(key);
+        }
+        
+        
+        var key = keyArray;
 
-        // encrypt...
-        var encryptedBytes = aes.encrypt(textAsBytes);
-        console.log(encryptedBytes);
-        // [136, 15, 199, 174, 118, 133, 233, 177, 143, 47, 42, 211, 96, 55, 107, 109] 
+        // Convert text to bytes
+        var text = textToEncrypt.value;
+        var textBytes = aesjs.utils.utf8.toBytes(text);
+
+        // The counter is optional, and if omitted will begin at 1
+        var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+        var encryptedBytes = aesCtr.encrypt(textBytes);
 
         // To print or store the binary data, you may convert it to hex
         var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
         console.log(encryptedHex);
-        // "880fc7ae7685e9b18f2f2ad360376b6d"
+        // "a338eda3874ed884b6199150d36f49988c90f5c47fe7792b0cf8c7f77eeffd87
+        //  ea145b73e82aefcf2076f881c88879e4e25b1d7b24ba2788"
 
         // When ready to decrypt the hex string, convert it back to bytes
         var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
 
-        // decrypt...
-        var decryptedBytes = aes.decrypt(encryptedBytes);
-        console.log(decryptedBytes);
-        // [65, 66, 108, 111, 99, 107, 73, 115, 49, 54, 66, 121, 116, 101, 115, 33]
+        // The counter mode of operation maintains internal state, so to
+        // decrypt a new instance must be instantiated.
+        var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+        var decryptedBytes = aesCtr.decrypt(encryptedBytes);
 
-
-        // decode the bytes back into our original text
+        // Convert our bytes back into text
         var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
         console.log(decryptedText);
+        // "Text may be any length you wish, no padding is required."
 
     }
 

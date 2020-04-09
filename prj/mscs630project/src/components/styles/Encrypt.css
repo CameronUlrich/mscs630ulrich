@@ -51,6 +51,10 @@
     animation: fadeIn 1s ease-out;
 }
 
+#encryptTextInput:focus{
+    outline: none;
+}
+
 #encryptKeyInput {
 
     position: absolute;
@@ -72,6 +76,11 @@
     transition: width 0.4s ease-in-out;
     animation: fadeIn 1s ease-out;
 }
+
+#encryptKeyInput:focus{
+    outline: none;
+}
+
 
 
 #encryptTextInput:focus{
