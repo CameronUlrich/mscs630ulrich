@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import React, { Component } from 'react';
 import Header from './Header';
 import './styles/Encrypt.css';
+import { AES } from "crypto-js/aes";
 
 
 
@@ -13,6 +14,7 @@ class EncryptPage extends Component {
         let encryptKey = document.getElementById('encryptKeyInput');
         
         var aesjs = require("aes-js");
+        var AES = require("crypto-js/aes");
         // An example 128-bit key (16 bytes * 8 bits/byte = 128 bits)
         var keyArray = [];
         var keyTest = encryptKey.value;
@@ -53,6 +55,14 @@ class EncryptPage extends Component {
         var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
         console.log(decryptedText);
         // "Text may be any length you wish, no padding is required."
+
+        //var ctx = document.getElementById('encryptImageInput').getContext('2d');;
+        //var imgd = ctx.getImageData(0,0,ctx.width,ctx.height);
+        //var pixelArray = imgd.data;
+
+        //console.log(ctx);
+        //console.log(imgd);
+        //console.log(pixelArray);
 
     }
 
