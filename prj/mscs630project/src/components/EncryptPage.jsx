@@ -13,7 +13,7 @@ class EncryptPage extends Component {
         
         var aesjs = require("aes-js")
         // the AES block cipher algorithm works on 16 byte bloca ks, no more, no less
-        var text = textToEncrypt.value;
+        var text = text;
         var textAsBytes = aesjs.utils.utf8.toBytes(text)
         console.log(textAsBytes);
         // [65, 66, 108, 111, 99, 107, 73, 115, 49, 54, 66, 121, 116, 101, 115, 33]
@@ -55,6 +55,10 @@ class EncryptPage extends Component {
                 <label id="encryptTextLabel">Text to be encryped into image:</label>
 
                 <input id="encryptTextInput" type="text" placeholder="Text to be encrypted"></input>
+
+                <label id="encryptKeyLabel">Key of 16 characters:</label>
+
+                <input id="encryptKeyInput" type="text" placeholder="Key"></input>
 
                 <label id="encryptImageLabel">Image to be encrypted:</label>
 

@@ -18,6 +18,15 @@
     font-size: 25px;
 }
 
+#encryptKeyLabel{
+    color: white;
+    animation: fadeIn 1s ease-out;
+    font-family: Verdana, Geneva, sans-serif;
+    position: absolute;
+    left: 835px;
+    top: 200px;
+    font-size: 25px;
+}
 
 
 #encryptTextInput {
@@ -41,6 +50,29 @@
     transition: width 0.4s ease-in-out;
     animation: fadeIn 1s ease-out;
 }
+
+#encryptKeyInput {
+
+    position: absolute;
+    left: 840px;
+    top: 250px;
+
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    animation: fadeIn 1s ease-out;
+}
+
 
 #encryptTextInput:focus{
     width: 350px;
