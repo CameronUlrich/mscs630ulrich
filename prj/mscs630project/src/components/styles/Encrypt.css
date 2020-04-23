@@ -29,7 +29,7 @@
 }
 
 
-#encryptTextInput {
+#message {
 
     position: absolute;
     left: 450px;
@@ -87,7 +87,7 @@
     width: 350px;
 }
 
-#encryptImageInput{
+#imageLoader{
     position: absolute;
     left: 1200px;
     top: 250px;
@@ -131,6 +131,36 @@
 #encryptButton:hover{
     background-color: rgb(67, 175, 67);
     border-radius: 25px;
+}
+
+#imageCanvas{
+    width: 720px;
+    height: 480px;
+    position: absolute;
+    /*background-color: blue;*/
+    left: 100px;
+    top: 400px;
+}
+
+#encryptedLabel{
+    position: absolute;
+    left: 840px;
+    top: 400px;
+
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    animation: fadeIn 1s ease-out;
 }
 
 
