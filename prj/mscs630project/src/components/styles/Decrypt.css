@@ -3,7 +3,7 @@
     animation: fadeIn 1s ease-out;
     font-family: Verdana, Geneva, sans-serif;
     position: absolute;
-    left: 820px;
+    left: 620px;
     top: 200px;
     font-size: 25px;
 }
@@ -14,9 +14,9 @@
     width: 350px;
 }
 
-#decryptImageInput{
+#imageLoader2{
     position: absolute;
-    left: 820px;
+    left: 620px;
     top: 250px;
     color: white;
     width: 300px;
@@ -58,6 +58,44 @@
 #decryptButton:hover{
     background-color: rgb(36, 36, 255);
     border-radius: 25px;
+}
+
+#decryptKeyLabel{
+    color: white;
+    animation: fadeIn 1s ease-out;
+    font-family: Verdana, Geneva, sans-serif;
+    position: absolute;
+    left: 1135px;
+    top: 200px;
+    font-size: 25px;
+}
+
+#decryptKeyInput {
+
+    position: absolute;
+    left: 1040px;
+    top: 250px;
+    outline: none;
+
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    animation: fadeIn 1s ease-out;
+}
+
+#encryptKeyInput:focus{
+    outline: none;
+    
 }
 
 
