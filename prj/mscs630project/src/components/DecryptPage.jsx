@@ -12,7 +12,7 @@ class DecryptPage extends Component {
 
     handleImage2 = () => {
 
-        var decryptedText;
+        
 
         //handle decoding
         var decodeCanvas = document.getElementById('imageCanvas2');
@@ -51,8 +51,8 @@ class DecryptPage extends Component {
                 img2.src = event.target.result;
             };
             reader2.readAsDataURL(e.target.files[0]);
-            decryptedText = reader2.readAsDataURL(e.target.files[0]);
-            console.log(decryptedText);
+            //decryptedText = reader2.readAsDataURL(e.target.files[0]);
+            //console.log(decryptedText);
     }
     
 
@@ -60,17 +60,33 @@ class DecryptPage extends Component {
 
     decryptText = () => {
 
+        let textToDecrypt = document.getElementById('decryptTextInput');
+        console.log(textToDecrypt.textContent);
+
         let decryptKey = document.getElementById('decryptKeyInput');
 
         var aesjs = require("aes-js");
         var AES = require("crypto-js/aes");
 
         // When ready to decrypt the hex string, convert it back to bytes
-        var encryptedBytes = aesjs.utils.hex.toBytes(decryptedText);
+        var encryptedBytes = aesjs.utils.hex.toBytes(textToDecrypt.value);
+
+        var keyArray = [];
+        var keyTest = decryptKey.value;
+        var i;
+        for(i = 0; i < keyTest.length; i++){
+            
+            keyArray[i] = keyTest.charAt(i);
+            keyArray[i] = parseInt(keyArray[i]);
+
+        }
+        
+        
+        var key = keyArray;
 
         // The counter mode of operation maintains internal state, so to
         // decrypt a new instance must be instantiated.
-        var aesCtr = new aesjs.ModeOfOperation.ctr(decryptKey, new aesjs.Counter(5));
+        var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
         var decryptedBytes = aesCtr.decrypt(encryptedBytes);
 
         // Convert our bytes back into text
@@ -105,7 +121,7 @@ class DecryptPage extends Component {
 
     wrapperFunction = () => {
         this.handleImage2();
-        this.decryptText();
+        //this.decryptText();
         
     }
 
@@ -120,13 +136,20 @@ class DecryptPage extends Component {
 
                 <label id="decryptKeyLabel">Key:</label>
 
-                <input id="decryptKeyInput" type="text" placeholder="Key"></input>
+                <input id="decryptKeyInput" type="text" placeholder="Key" class="glowing-border"></input>
+
+                <label id="decryptTextLabel">Encrypted Text:</label>
+
+                <input id="decryptTextInput" type="text" placeholder="Encrypted Text" class="glowing-border"></input>
 
                 
 
                 <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt</Button>
 
+                <Button id="decryptKeyButton" onClick={this.decryptText}>Decrypt Key</Button>
+
                 <canvas id="imageCanvas2"></canvas>
+                <label id="testDecrypt" disabled ></label>
             </div>
         );
         

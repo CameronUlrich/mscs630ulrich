@@ -3,20 +3,24 @@
     animation: fadeIn 1s ease-out;
     font-family: Verdana, Geneva, sans-serif;
     position: absolute;
-    left: 620px;
+    left: 505px;
     top: 200px;
     font-size: 25px;
 }
 
-
+#imageCanvas2{
+    position: absolute;
+    top: 300px;
+    left: 885px;
+}
 
 #decryptTextInput:focus{
-    width: 350px;
+    
 }
 
 #imageLoader2{
     position: absolute;
-    left: 620px;
+    left: 500px;
     top: 250px;
     color: white;
     width: 300px;
@@ -60,12 +64,38 @@
     border-radius: 25px;
 }
 
+#decryptKeyButton{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: white;
+    background-color: transparent;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 650px;
+    left: 1050px;
+    animation: fadeIn 1s ease-out;
+}
+
+#decryptKeyButton:hover{
+    background-color: rgb(36, 36, 255);
+    border-radius: 25px;
+}
+
 #decryptKeyLabel{
     color: white;
     animation: fadeIn 1s ease-out;
     font-family: Verdana, Geneva, sans-serif;
     position: absolute;
-    left: 1135px;
+    left: 1240px;
     top: 200px;
     font-size: 25px;
 }
@@ -73,7 +103,7 @@
 #decryptKeyInput {
 
     position: absolute;
-    left: 1040px;
+    left: 1150px;
     top: 250px;
     outline: none;
 
@@ -96,6 +126,56 @@
 #encryptKeyInput:focus{
     outline: none;
     
+}
+
+
+#decryptTextLabel{
+    color: white;
+    animation: fadeIn 1s ease-out;
+    font-family: Verdana, Geneva, sans-serif;
+    position: absolute;
+    left: 875px;
+    top: 200px;
+    font-size: 25px;
+}
+
+#decryptTextInput {
+
+    position: absolute;
+    left: 850px;
+    top: 250px;
+    outline: none;
+
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    animation: fadeIn 1s ease-out;
+}
+
+#encryptTextInput:focus{
+    outline: none;
+    
+}
+
+.glowing-border {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+}
+
+.glowing-border:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
 
 
