@@ -128,6 +128,15 @@
     
 }
 
+#secretMessage{
+    color: white;
+    animation: fadeIn 1s ease-out;
+    font-family: Verdana, Geneva, sans-serif;
+    position: absolute;
+    left: 650px;
+    top: 500px;
+    font-size: 25px;
+}
 
 #decryptTextLabel{
     color: white;

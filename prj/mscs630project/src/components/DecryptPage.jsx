@@ -59,6 +59,7 @@ class DecryptPage extends Component {
     }
 
     decryptText = () => {
+        let secretMessageText = document.getElementById('secretMessage');
 
         let textToDecrypt = document.getElementById('decryptTextInput');
         console.log(textToDecrypt.textContent);
@@ -92,6 +93,8 @@ class DecryptPage extends Component {
         // Convert our bytes back into text
         var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
         console.log(decryptedText);
+        secretMessageText.innerHTML = "Secret Message: " + decryptedText;
+
         // "Text may be any length you wish, no padding is required."
 
         //var ctx = document.getElementById('encryptImageInput').getContext('2d');;
@@ -147,6 +150,8 @@ class DecryptPage extends Component {
                 <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt</Button>
 
                 <Button id="decryptKeyButton" onClick={this.decryptText}>Decrypt Key</Button>
+
+                <label id="secretMessage">Secret Message:</label>
 
                 <canvas id="imageCanvas2"></canvas>
                 <label id="testDecrypt" disabled ></label>
