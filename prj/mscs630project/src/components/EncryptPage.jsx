@@ -161,7 +161,7 @@ class EncryptPage extends Component {
                 <input id="imageLoader" type="file"></input>
 
                 <canvas id="imageCanvas"></canvas>
-	            <canvas id="textCanvas"></canvas>
+	            <canvas id="textCanvas" hidden></canvas>
 
                 <Button id="encryptButton" onClick={this.wrapperFunction}>Encrypt</Button>
             </div>
