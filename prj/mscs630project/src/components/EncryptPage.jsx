@@ -165,7 +165,7 @@ class EncryptPage extends Component {
                 
                 <Header />
                 
-                <label id="encryptTextLabel">Text to be encryped into image:</label>
+                <label id="encryptTextLabel">Text to be encrypted into image:</label>
 
                 <input id="message" type="text" placeholder="Text to be encrypted" onChange={this.enableImage}></input>
 
