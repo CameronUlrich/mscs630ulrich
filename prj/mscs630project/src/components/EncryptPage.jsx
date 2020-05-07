@@ -25,6 +25,21 @@ import { AES } from "crypto-js/aes";
     
 
 class EncryptPage extends Component {
+
+    enableImage = () =>{
+        
+        let textToEncrypt = document.getElementById('message');
+        var imageLoader = document.getElementById('imageLoader');
+        let encryptKey = document.getElementById('encryptKeyInput'); 
+
+        if(encryptKey.value != "" && textToEncrypt.value != ""){
+            imageLoader.disabled = false;
+        }
+        else{
+            imageLoader.disabled = true;
+        }
+        
+    }
     
     handleImage = () => {
         var imageLoader = document.getElementById('imageLoader');
@@ -133,6 +148,8 @@ class EncryptPage extends Component {
 
     
 
+    
+
     wrapperFunction = () => {
         this.handleImage();
         this.encryptText();
@@ -148,17 +165,17 @@ class EncryptPage extends Component {
                 
                 <label id="encryptTextLabel">Text to be encryped into image:</label>
 
-                <input id="message" type="text" placeholder="Text to be encrypted"></input>
+                <input id="message" type="text" placeholder="Text to be encrypted" onChange={this.enableImage}></input>
 
                 <label id="encryptKeyLabel">Key of 16 characters:</label>
 
-                <input id="encryptKeyInput" type="text" placeholder="Key"></input>
+                <input id="encryptKeyInput" type="text" placeholder="Key" onChange={this.enableImage}></input>
 
                 <label id="encryptImageLabel">Image to be encrypted:</label>
 
                 <input id="encryptedLabel" hidden disabled ></input>
 
-                <input id="imageLoader" type="file" accept="image/png, image/jpeg" onClick={this.wrapperFunction}></input>
+                <input id="imageLoader" type="file" accept="image/png, image/jpeg" disabled onClick={this.wrapperFunction}></input>
 
                 <canvas id="imageCanvas"></canvas>
 	            <canvas id="textCanvas" hidden></canvas>
