@@ -135,7 +135,7 @@ class DecryptPage extends Component {
                 
                 <label id="decryptImageLabel">Image to be decrypted:</label>
 
-                <input id="imageLoader2" type="file"></input>
+                <input id="imageLoader2" type="file" accept="image/png, image/jpeg"></input>
 
                 <label id="decryptKeyLabel">Key:</label>
 
@@ -147,7 +147,7 @@ class DecryptPage extends Component {
 
                 
 
-                <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt</Button>
+                <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt Image</Button>
 
                 <Button id="decryptKeyButton" onClick={this.decryptText}>Decrypt Key</Button>
 

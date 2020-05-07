@@ -55,7 +55,7 @@
     outline: none;
     position: absolute;
     top: 650px;
-    left: 875px;
+    left: 625px !important;
     animation: fadeIn 1s ease-out;
 }
 
