@@ -158,7 +158,7 @@ class EncryptPage extends Component {
 
                 <input id="encryptedLabel" hidden disabled ></input>
 
-                <input id="imageLoader" type="file" accept="image/png, image/jpeg" onClick={this.handleImage}></input>
+                <input id="imageLoader" type="file" accept="image/png, image/jpeg" onClick={this.wrapperFunction}></input>
 
                 <canvas id="imageCanvas"></canvas>
 	            <canvas id="textCanvas" hidden></canvas>

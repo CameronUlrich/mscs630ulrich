@@ -11,7 +11,9 @@
 #imageCanvas2{
     position: absolute;
     top: 300px;
-    left: 885px;
+    left: 800px;
+    
+   
 }
 
 #decryptTextInput:focus{
@@ -55,7 +57,7 @@
     outline: none;
     position: absolute;
     top: 650px;
-    left: 625px !important;
+    left: 550px !important;
     animation: fadeIn 1s ease-out;
 }
 
@@ -80,8 +82,8 @@
     cursor: pointer;
     outline: none;
     position: absolute;
-    top: 650px;
-    left: 1050px;
+    top: 750px;
+    left: 550px;
     animation: fadeIn 1s ease-out;
 }
 
