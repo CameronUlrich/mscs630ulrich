@@ -26,6 +26,16 @@ import { AES } from "crypto-js/aes";
 
 class EncryptPage extends Component {
 
+    validateData = () =>{
+        let textToEncrypt = document.getElementById('message');
+        var imageLoader = document.getElementById('imageLoader');
+        let encryptKey = document.getElementById('encryptKeyInput'); 
+
+        if((encryptKey.length != 15 || encryptKey.length != 31) && encryptKey){
+
+        }
+    }
+
     enableImage = () =>{
         
         let textToEncrypt = document.getElementById('message');
@@ -169,7 +179,7 @@ class EncryptPage extends Component {
 
                 <label id="encryptKeyLabel">Key of 16 characters:</label>
 
-                <input id="encryptKeyInput" type="text" placeholder="Key" onChange={this.enableImage}></input>
+                <input id="encryptKeyInput" type="number" placeholder="Key" min="16" max="32" onChange={this.enableImage}></input>
 
                 <label id="encryptImageLabel">Image to be encrypted:</label>
 
