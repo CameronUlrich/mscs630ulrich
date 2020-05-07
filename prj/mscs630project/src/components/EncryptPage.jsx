@@ -26,15 +26,7 @@ import { AES } from "crypto-js/aes";
 
 class EncryptPage extends Component {
 
-    validateData = () =>{
-        let textToEncrypt = document.getElementById('message');
-        var imageLoader = document.getElementById('imageLoader');
-        let encryptKey = document.getElementById('encryptKeyInput'); 
-
-        if((encryptKey.length != 15 || encryptKey.length != 31) && encryptKey){
-
-        }
-    }
+    
 
     enableImage = () =>{
         
@@ -43,10 +35,10 @@ class EncryptPage extends Component {
         let encryptKey = document.getElementById('encryptKeyInput'); 
 
         if(encryptKey.value != "" && textToEncrypt.value != ""){
-            imageLoader.disabled = false;
+            imageLoader.hidden = false;
         }
         else{
-            imageLoader.disabled = true;
+            imageLoader.hidden = true;
         }
         
     }
@@ -185,7 +177,7 @@ class EncryptPage extends Component {
 
                 <input id="encryptedLabel" hidden disabled ></input>
 
-                <input id="imageLoader" type="file" accept="image/png, image/jpeg" disabled onClick={this.wrapperFunction}></input>
+                <input id="imageLoader" type="file" accept="image/png, image/jpeg" hidden onClick={this.wrapperFunction}></input>
 
                 <canvas id="imageCanvas"></canvas>
 	            <canvas id="textCanvas" hidden></canvas>
