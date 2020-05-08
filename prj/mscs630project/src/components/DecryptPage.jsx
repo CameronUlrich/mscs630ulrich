@@ -9,6 +9,33 @@ import { AES } from "crypto-js/aes";
 
 class DecryptPage extends Component {
 
+    validatePage = () =>{
+        //console.log("Test");
+        
+        let textToDecrypt = document.getElementById('decryptTextInput');
+        var imageLoader = document.getElementById('imageLoader2');
+        let decryptKey = document.getElementById('decryptKeyInput'); 
+        let decryptButton = document.getElementById('decryptKeyButton');
+
+        if(decryptKey.value != "" && textToDecrypt.value != ""){
+            if(decryptKey.value.length === 16 || decryptKey.value.length === 32){
+                decryptButton.disabled = false;
+                //console.log("undisabled");
+            }
+            else{
+                decryptButton.disabled = true;
+                
+
+            }
+            
+        }
+        else{
+            decryptButton.disabled = true;
+            //console.log("jksjfk");
+        }
+        
+    }
+
 
     
 
@@ -127,9 +154,15 @@ class DecryptPage extends Component {
     
 
     }
+    decryptWrapper = () =>{
+        this.validatePage();
+        this.decryptText();
+
+    }
 
     wrapperFunction = () => {
         this.handleImage2();
+        
         //this.decryptText();
         
     }
@@ -145,17 +178,17 @@ class DecryptPage extends Component {
 
                 <label id="decryptKeyLabel">Key:</label>
 
-                <input id="decryptKeyInput" type="text" placeholder="Key" class="glowing-border"></input>
+                <input id="decryptKeyInput" type="number" placeholder="Key" min="16" max="32" class="glowing-border" onChange={this.validatePage}></input>
 
                 <label id="decryptTextLabel">Encrypted Text:</label>
 
-                <input id="decryptTextInput" type="text" placeholder="Encrypted Text" class="glowing-border"></input>
+                <input id="decryptTextInput" type="text" placeholder="Encrypted Text" class="glowing-border" onChange={this.validatePage}></input>
 
                 
 
                 <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt Image</Button>
 
-                <Button id="decryptKeyButton" onClick={this.decryptText}>Decrypt Text</Button>
+                <Button id="decryptKeyButton" onClick={this.decryptWrapper} >Decrypt Text</Button>
 
                 <label id="secretMessage">Secret Message:</label>
 
