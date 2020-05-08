@@ -5,8 +5,23 @@
 #welcomeText{
     color: white;
 }
+#descriptionText{
+    color: white;
+}
 
+#objectiveText{
+    color: white;
+    width: 1000px;
+    position: absolute;
+    left: 450px;
+}
 
+#homeImage{
+    position: absolute;
+    width: 800px;
+    left: 550px;
+    top: 550px;
+}
 
 
 

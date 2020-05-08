@@ -9,7 +9,7 @@ import { AES } from "crypto-js/aes";
 
 class DecryptPage extends Component {
 
-    
+
     
 
     handleImage2 = () => {
@@ -96,6 +96,9 @@ class DecryptPage extends Component {
         var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
         console.log(decryptedText);
         secretMessageText.innerHTML = "Secret Message: " + decryptedText;
+        
+
+
 
         // "Text may be any length you wish, no padding is required."
 
