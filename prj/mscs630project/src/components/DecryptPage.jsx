@@ -97,6 +97,7 @@ class DecryptPage extends Component {
         console.log(decryptedText);
         secretMessageText.innerHTML = "Secret Message: " + decryptedText;
         
+        
 
 
 

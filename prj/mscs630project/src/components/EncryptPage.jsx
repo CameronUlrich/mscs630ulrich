@@ -35,7 +35,15 @@ class EncryptPage extends Component {
         let encryptKey = document.getElementById('encryptKeyInput'); 
 
         if(encryptKey.value != "" && textToEncrypt.value != ""){
-            imageLoader.hidden = false;
+            if(encryptKey.value.length === 16 || encryptKey.value.length === 32){
+                imageLoader.hidden = false;
+            }
+            else{
+                imageLoader.hidden = true;
+                
+
+            }
+            
         }
         else{
             imageLoader.hidden = true;
@@ -137,6 +145,7 @@ class EncryptPage extends Component {
         var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
         console.log(encryptedHex);
         encryptedLabel.value = encryptedHex;
+        
 
         // "a338eda3874ed884b6199150d36f49988c90f5c47fe7792b0cf8c7f77eeffd87
         //  ea145b73e82aefcf2076f881c88879e4e25b1d7b24ba2788"
@@ -169,7 +178,7 @@ class EncryptPage extends Component {
 
                 <input id="message" type="text" placeholder="Text to be encrypted" onChange={this.enableImage}></input>
 
-                <label id="encryptKeyLabel">Key of 16 characters:</label>
+                <label id="encryptKeyLabel">Key of 16 or 32 characters:</label>
 
                 <input id="encryptKeyInput" type="number" placeholder="Key" min="16" max="32" onChange={this.enableImage}></input>
 
