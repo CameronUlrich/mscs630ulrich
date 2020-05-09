@@ -52,6 +52,7 @@ class EncryptPage extends Component {
     }
     
     handleImage = () => {
+        let saveImage = document.getElementById('saveImageLabel');
         var imageLoader = document.getElementById('imageLoader');
         imageLoader.addEventListener('change', handleImage, false);
         var canvas = document.getElementById('imageCanvas');
@@ -106,7 +107,9 @@ class EncryptPage extends Component {
                 img.src = event.target.result;
             };
             reader.readAsDataURL(e.target.files[0]);
+            saveImage.hidden = false;
         }
+        
     }
 
     
@@ -190,6 +193,8 @@ class EncryptPage extends Component {
                 <input id="encryptedLabel" hidden disabled ></input>
 
                 <input id="imageLoader" type="file" accept="image/png, image/jpeg" hidden onClick={this.wrapperFunction}></input>
+
+                <label id="saveImageLabel" hidden>Right click and save the image below:</label>
 
                 <canvas id="imageCanvas"></canvas>
 	            <canvas id="textCanvas" hidden></canvas>
