@@ -178,17 +178,17 @@ class DecryptPage extends Component {
 
                 <label id="decryptKeyLabel">Key:</label>
 
-                <input id="decryptKeyInput" type="number" placeholder="Key" min="16" max="32" class="glowing-border" onChange={this.validatePage}></input>
+                <input id="decryptKeyInput" type="number" placeholder="Key" min="16" max="32" class="glowing-border" onChange={this.validatePage} title="Type the key of 16 or 32 digits"></input>
 
-                <label id="decryptTextLabel">Encrypted Text:</label>
+                <label id="decryptTextLabel" >Encrypted Text:</label>
 
-                <input id="decryptTextInput" type="text" placeholder="Encrypted Text" class="glowing-border" onChange={this.validatePage}></input>
+                <input id="decryptTextInput" type="text" placeholder="Encrypted Text" class="glowing-border" onChange={this.validatePage} title="Type the encrypted message that appears below"></input>
 
                 
 
                 <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt Image</Button>
 
-                <Button id="decryptKeyButton" onClick={this.decryptWrapper} disabled >Decrypt Text</Button>
+                <Button id="decryptKeyButton" onClick={this.decryptWrapper} disabled title="This button is disabled unless the key is 16 or 32 digits">Decrypt Text</Button>
 
                 <label id="secretMessage">Secret Message:</label>
 
