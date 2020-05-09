@@ -88,6 +88,7 @@ class DecryptPage extends Component {
     }
 
     decryptText = () => {
+        console.log("test");
         let secretMessageText = document.getElementById('secretMessage');
 
         let textToDecrypt = document.getElementById('decryptTextInput');
@@ -189,7 +190,7 @@ class DecryptPage extends Component {
 
                 <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt Image</Button>
 
-                <Button id="decryptKeyButton" onClick={this.decryptWrapper} disabled title="This button is disabled unless the key is 16 or 32 digits">Decrypt Text</Button>
+                <Button id="decryptKeyButton" onClick={this.decryptWrapper} title="This button is disabled unless the key is 16 or 32 digits">Decrypt Text</Button>
 
                 <label id="secretMessage">Secret Message:</label>
 
