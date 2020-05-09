@@ -163,6 +163,10 @@
     animation: fadeIn 1s ease-out;
 }
 
+#encryptHeader{
+    color: white;
+}
+
 
 
 @keyframes fadeIn{

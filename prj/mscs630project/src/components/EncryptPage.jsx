@@ -174,7 +174,7 @@ class EncryptPage extends Component {
                 
                 <Header />
 
-                <h1>The image input box will be enabled once you type in a text and a key</h1>
+                <h1 id="encryptHeader">The image input box will be enabled once you type in a text and a key</h1>
 
                 
                 <label id="encryptTextLabel">Text to be encrypted into image:</label>

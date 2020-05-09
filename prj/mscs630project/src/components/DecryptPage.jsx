@@ -171,7 +171,7 @@ class DecryptPage extends Component {
         return(
             <div>
                 <Header />
-                <h1>The decrypt text button will be enabled once you type in the text and the 16 or 32 digit key</h1>
+                <h1 id="decryptHeader">The decrypt text button will be enabled once you type in the text and the 16 or 32 digit key</h1>
                 
                 <label id="decryptImageLabel">Image to be decrypted:</label>
 
