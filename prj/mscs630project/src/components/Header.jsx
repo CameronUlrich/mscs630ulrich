@@ -23,7 +23,8 @@ class Header extends Component {
             <div>
                 <div className="topnav">
                     <ul>
-                        <Link to="/" className="homeText">Total Image Encrypt</Link>
+                        
+                        <Link to="/" className="homeText"><img id = "headerLogo" src="encryptLogo.png"></img>Total Image Encrypt</Link>
                         {/*<h1 id="headerText">Total Image Encrypt</h1>*/}
                         <Link to="/encrypt" className="encryptBtn">Encrypt</Link>
                         <Link to="/decrypt" className="decryptBtn">Decrypt</Link>

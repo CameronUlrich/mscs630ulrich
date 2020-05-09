@@ -134,4 +134,10 @@
     cursor: pointer;
   }
 
+  #headerLogo{
+    position: relative;
+    height: 30px;
+    float: left;
+  }
+
   
