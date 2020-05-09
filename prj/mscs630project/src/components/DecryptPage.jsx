@@ -188,7 +188,7 @@ class DecryptPage extends Component {
 
                 <Button id="decryptButton" onClick={this.wrapperFunction}>Decrypt Image</Button>
 
-                <Button id="decryptKeyButton" onClick={this.decryptWrapper} >Decrypt Text</Button>
+                <Button id="decryptKeyButton" onClick={this.decryptWrapper} disabled >Decrypt Text</Button>
 
                 <label id="secretMessage">Secret Message:</label>
 
